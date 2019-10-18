@@ -1,0 +1,243 @@
+$main-color: #ffffff;
+$section-back-color: #000000;
+$border-color: #ff0000;
+$desktop: 1440px;
+$mobile: 376px;
+$font-YOR: "YesevaOne-Regular", serif;
+$font-FBC: "FuturaBookC-Regular", sans-serif;
+
+@mixin font($font, $size, $line, $text-transform) {
+    font-family: $font;
+    font-size: $size;
+    line-height: $line;
+    text-transform: $text-transform;
+}
+
+%border-bottom{
+    border-bottom: 1px solid $border-color;
+}
+
+@font-face{
+    font-family: "YesevaOne-Regular";
+    src: url(./assets/fonts/YesevaOne-Regular.otf)
+}
+
+@font-face{
+    font-family: "FuturaBookC-Regular";
+    src: url(./assets/fonts/FuturaBookC.otf)
+}
+
+body{
+    margin: 0;
+    color: $main-color;
+    background-color:$main-color ;
+}
+
+.main{
+    max-width: $desktop;
+    margin: 0 auto;
+    background-color: $section-back-color;
+}
+
+.author-portfolio__photo{
+    display: inline-block;
+    margin: 3% 3%;
+
+    img{
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+    }
+}
+
+.author-portfolio__wrapper{
+    @extend %border-bottom;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.author-portfolio__links{
+    display: flex;
+    flex-direction: column;
+}
+
+.author-portfolio__name{
+    @include font($font-YOR, 20px, 25px, uppercase);
+    display: block;
+    margin-bottom: 4%;
+}
+
+.author-portfolio-head__text{
+    @include font($font-YOR, 25px, 25px, uppercase);
+}
+
+.author-portfolio__link{
+    @include font($font-FBC, 18px, 20px, none);
+
+    display: inline-block;
+    margin-top: 3%;
+
+    a{
+        color: $main-color;
+        text-decoration: none;
+
+        &:hover{
+            color: $border-color;
+        }
+    }
+}
+
+.author-portfolio-head{
+    @extend %border-bottom;
+
+    margin-bottom: 1%;
+    padding-top: 3%;    
+}
+
+.author-portfolio-head__text{
+    display: block;
+    margin-bottom: 2%;
+    text-align: center;
+}
+
+.education{
+    background: $section-back-color;
+}
+
+.education__open{
+    width: 30px;
+    height: 30px;
+    margin: auto 0;
+    padding: 0;
+    border: 1px solid $border-color;
+    background-image: url(./assets/img/arrow-down.png);
+    background-repeat: no-repeat;
+
+    &:hover{
+        cursor: pointer;
+    }
+}
+
+.education__panel{
+    @extend %border-bottom;
+
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.eduction-list{
+    @extend %border-bottom;
+
+    width: 50%;
+    margin: 0 auto 2%;
+    padding: 0;
+}
+
+.education-list--hide{
+    display: none;
+}
+
+.education-open--rotate{
+    transform: rotate(-180deg);
+}
+
+.eduction-list__item{
+    @include font($font-FBC, 18px, 20px, none);
+
+    display: flex;
+    flex-direction: column;
+    margin: 3% 0;
+}
+
+.projects{
+    background: $section-back-color;
+}
+
+.projects-head__text{
+    display: block;
+    margin-bottom: 2%;
+    text-align: center;   
+}
+
+.projects-head{
+    @extend %border-bottom;
+
+    display: flex;
+    width: 50%;
+    margin: 0 auto 2%;   
+}
+
+.swiper-container {
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    background: black;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: black;
+    
+    @media (max-width: $mobile){
+       flex-direction: column;
+    }
+  }
+
+.swiper-slide__item{
+   display: flex;
+   flex-direction: column;
+    width: 20%;
+    height: 100%;
+    text-align: start;
+
+    @media (max-width: $mobile){
+        display: none;
+    }
+}
+
+.swiper-slide__item--open{
+    display: block;
+    width: 100%;
+    height: 50%;
+    position: absolute;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.253);
+}
+
+.swiper-slide__work{
+    margin: 2% 0;
+    text-decoration: underline;
+}
+
+.description{
+    display: none;
+
+    @media (max-width: $mobile){
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+.swiper-slide__image{
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-button--hide{
+    @media (max-width: $mobile){
+        display: none !important ;
+   }
+}
+

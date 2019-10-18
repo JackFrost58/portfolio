@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+</head>
+</head>
+<body>
+    <main class="main">
+        <section class="author-portfolio">
+            <div class="author-portfolio-head">
+                <h1 class="author-portfolio-head__text">Portfolio</span>
+            </div>
+            <div class="author-portfolio__wrapper">
+                <div class="author-portfolio__photo">
+                    <img src="./assets/img/My_photo.jpg" alt="my_photo" >
+                </div>
+                <div class="author-portfolio__container">
+                    <span class="author-portfolio__name">Vladislav Zhgirov</span>
+                    <div class="author-portfolio__links">
+                        <span class="author-portfolio__link"><a href="https://github.com/JackFrost58">Github</a></span>
+                        <span class="author-portfolio__link">
+                            <a href="https://vk.com/triangle_2">VK</a>/
+                            <a href="https://t.me/ZhgirovVS"> Telegram </a>/
+                            <a href="mailto:zgv2324@gmail.com">Mail</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="education">
+            <div class="education__panel">
+                <h2 class="education__head">Education</h2>
+                <button class="education__open" id="button_open"></button>
+            </div>
+            <ul class="eduction-list" id="list">
+                <li class="eduction-list__item">
+                    <span class="education-list__place-education">School №11</span>
+                    <span class="education-list__date-education">2003-2014</span>
+                </li>
+                <li class="eduction-list__item">
+                    <span class="education-list__place-education">VSU after P.M. Masherov</span>
+                    <span class="education-list__date-education">2014-2018</span>
+                </li>
+            </ul>
+        </section>
+        <section class="projects">
+            <div class="projects-head">
+                <h2 class="projects-head__text">Projects</h2>
+            </div>        
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <button class="description" id="description-repair">
+                            Show description
+                        </button>
+                        <div class="swiper-slide__item" id="swiper-item">
+                            <h3>Homework: Repair-design-project</h3>
+                            <span class="swiper-slide__work">Work with:</span>
+                            <span>
+                                Figma <br>
+                                HTML <br>
+                                CSS <br>
+                                Flex
+                            </span>
+                        </div>
+                        <a href="./projects/repair-design-project/wrapper/wrapper.html"> 
+                            <img class="swiper-slide__image" src="./assets/img/repair-design-project.PNG" alt="first-project">
+                        </a>   
+                    </div>
+                    <div class="swiper-slide">
+                        <button class="description" id="description-theyallow">
+                            Show description
+                        </button>
+                        <div class="swiper-slide__item" id="swiper-item">
+                            <h3>Homework: TheYallow</h3>
+                            <span class="swiper-slide__work">Work with:</span>
+                            <span>
+                                Pixel-perfect <br>
+                                HTML <br>
+                                CSS
+                            </span>
+                        </div>
+                        <a  href="./projects/theyalow/index.html">
+                            <img class="swiper-slide__image" src="./assets/img/theyallow.PNG" alt="second-project">
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-button-next swiper-button--hide"></div>
+                <div class="swiper-button-prev swiper-button--hide"></div>
+              </div>
+        </section>
+     </main>   
+</body>
+    <script src="https://unpkg.com/swiper/js/swiper.js"></script>
+    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+    <script src="./script.js"></script>
+</html>
