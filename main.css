@@ -19,7 +19,7 @@ body {
 }
 
 .main {
-  max-width: 1440px;
+  max-width: 1000px;
   margin: 0 auto;
   background-color: #000000;
 }
@@ -267,5 +267,9 @@ body {
   .swiper-button--hide {
     display: none !important;
   }
+}
+
+.swiper-button-next {
+  color: #ff0000 !important;
 }
 /*# sourceMappingURL=main.css.map */
