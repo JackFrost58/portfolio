@@ -1,13 +1,14 @@
 let buttonArrow = document.getElementById('button_open');
+const educationPanel =document.getElementById('education');
 let list = document.getElementById('list');
-var descriptions = document.getElementsByClassName('swiper-slide__item');
-var buttonDesc = document.getElementsByClassName('description');
-var arrayButtons = Array.from(buttonDesc);
-var arrayDesc = Array.from(descriptions);
+const descriptions = document.getElementsByClassName('swiper-slide__item');
+const buttonDesc = document.getElementsByClassName('description');
+const arrayButtons = Array.from(buttonDesc);
+const arrayDesc = Array.from(descriptions);
 
 
 
-buttonArrow.addEventListener('click', () => {
+educationPanel.addEventListener('click', () => {
     list.classList.toggle('education-list--hide');
     buttonArrow.classList.toggle('education-open--rotate');
 }, false);
