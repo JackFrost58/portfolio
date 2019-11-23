@@ -9,14 +9,20 @@ const arrayDesc = Array.from(descriptions);
 
 
 educationPanel.addEventListener('click', () => {
-    list.classList.toggle('education-list--hide');
+    let content = educationPanel.nextElementSibling;
+
+    if (content.style.maxHeight) {
+        content.style.maxHeight = null;
+    } else {
+        content.style.maxHeight = content.scrollHeight + 'px';
+    }
     buttonArrow.classList.toggle('education-open--rotate');
 }, false);
 
-arrayButtons.forEach(function(item){
+arrayButtons.forEach(function(item) {
     let param = arrayButtons.indexOf(item);
    
-    item.onclick = function(){
+    item.onclick = function() {
         arrayDesc[param].classList.toggle('swiper-slide__item--open');
     }
 })

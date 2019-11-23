@@ -131,16 +131,22 @@ body {
           justify-content: space-between;
   width: 50%;
   margin: 0 auto;
+  cursor: pointer;
+}
+
+.education__panel:hover {
+  color: #ff0000;
 }
 
 .eduction-list {
   width: 50%;
   margin: 0 auto 2%;
   padding: 0;
-}
-
-.education-list--hide {
-  display: none;
+  opacity: 1;
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: max-height 0.2s ease-out;
+  transition: max-height 0.2s ease-out;
 }
 
 .education-open--rotate {
