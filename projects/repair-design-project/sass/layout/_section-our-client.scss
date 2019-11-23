@@ -1,0 +1,112 @@
+.section-our-client{
+    margin-bottom: 132px;
+
+    @media (max-width: $mobile){
+        display: none;
+    }
+
+    @media (min-width: $mobile) and (max-width: $tablet){
+        display: none;    
+    }
+}
+
+.section-our-client__description{
+    @include font($font-FBC, 20px, 27px, none);
+
+    display: block;
+    width: 350px;
+    margin: 24px auto 39px;
+    text-align: center;
+    color: $text-color--dark;
+}
+
+.section-our-client__wrapper{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 7.2%;
+}
+
+.block-comment{
+    width: 376px;
+}
+
+.block-comment__content{
+    height: 404px;
+    box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.04);
+}
+
+.block-comment__photo-name{
+    margin: 24px 0 20px 22px;
+
+    img{
+        width: 76px;
+        height: 76px;
+    }
+}
+
+.block-comment__photo-name{
+    display: flex;
+}
+
+.block-comment__name{
+    @include font($font-YOR, 18px, 23px, none);
+
+    display: block;
+    margin: 19px 24px 0;
+    font-weight: normal;
+    color: $main-back-color;
+}
+
+.block-comment__text{
+    @include font($font-FBC, 15px, 27px, none);
+
+    display: block;
+    width: 324px;
+    margin-left: 20px;
+    color: #959595;
+}
+
+.block-comment__numbers{
+    @include size_block(294px, 54px);
+    @extend %pos_relative;
+
+    bottom: 27px;
+
+    background-color: $text-color--main;
+    box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3);
+}
+
+.block-comment-list{
+    @include font($font-YOR, 17px, 24px, $uppercase);
+    
+    height: 100%;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+    list-style: none;
+}
+
+.block-comment-list__item{
+    @include flex_center();
+
+    img{
+        display: block;
+        margin-right: 15px;
+    }
+}
+
+.block-comment-list__item-area{
+    width: 46%;
+    border-right: 1px solid $text-color--light;
+}
+
+.block-comment-list__text{
+    display: block;
+}
+
+.block-comment-list__item-days{
+    img{
+        margin-left: 15px;
+    }
+}

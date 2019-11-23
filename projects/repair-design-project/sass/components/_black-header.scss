@@ -1,0 +1,33 @@
+.black-heading{
+    height: 95px;
+    padding-top: 4%;
+    background-color: $main-back-color;
+
+    @media (max-width: $mobile){
+        padding-top: 43px;
+    }
+}
+
+.black-heading__text{
+    @include head_block($text-color--light);
+
+    font-weight: normal;
+}
+
+.black-heading__icon{
+    @include size_block(34px, 29px);
+
+    @extend %icon-property;
+}
+
+.black-heading__image{
+    margin: 0 auto;
+}
+
+.black-heading--bottom{
+    padding-top: 93px;
+
+    @media (min-width: $mobile) and (max-width: $tablet){
+        padding-top: 20px;
+    }
+}

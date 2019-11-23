@@ -1,0 +1,153 @@
+.section-order{
+    position: relative;
+    display: flex;
+    background-color: $main-back-color;
+
+    @media (max-width: $mobile) {
+        @include size_block(100%, 476px);
+    }
+}
+
+.sidebar{
+    width: 6%;
+    padding-top: 255px;
+    color: $text-color--main;
+    background-color: $main-back-color;
+
+    @media (min-width: $mobile) and (max-width: $tablet){
+        width: 10%;
+        margin-top: 25%;
+        padding: 0;
+    }
+
+    @media (max-width: $mobile) {
+        display: none;
+    }
+}
+
+.sidebar__link{
+    @include font($font-FDC, 14px, 16px, $uppercase);
+
+    position: relative;
+    display: inline-block;
+    color: $text-color--main;
+    text-decoration: none;
+    transform: $rotate_vertical;
+    -moz-transform: $rotate_vertical;
+    -ms-transform: $rotate_vertical; 
+    
+    &:hover{
+        color:$text-color--light;
+    }
+
+    &:after{
+        content: "";
+        @include size_block(2px, 51px);
+
+        position: absolute;
+        top: -16px;
+        left: 119px;
+        display: inline-block;
+        background-color: $text-color--main;
+        transform: $rotate_vertical;
+       
+    }
+}
+
+.order-wrapper{
+    @include image("./assets/img/background-section-order.png");
+
+    width: 95%;
+
+    @media (max-width: $mobile) {
+        @include image("./assets/img/back-order-media.png");
+
+        width: 100%;
+        padding-top: 23%;
+    }
+}
+
+.order-wrapper__heading{
+    @include font($font-YOR, 2.4em, 53px, $uppercase);
+
+    width: 495px;
+    margin: 14.3% 0 1.4% 4.5%;
+    font-weight: normal;
+
+    &:after{
+        content: "Rostov-on-Don";
+        color: $text-color--main;
+    }
+
+    @media (min-width: $mobile) and (max-width: $tablet){
+        @include font($font-YOR, 2em, 43px, $uppercase);
+
+        margin: 14.3% auto 4.5%;
+        text-align: center;
+    }
+
+    @media (max-width: $mobile) {
+        @include font($font-YOR, 1.5em, 30px, $uppercase);
+        @include size_block(339px, 60px);
+
+        margin: 4% auto;
+        font-weight: 400;
+    }
+}
+
+.order-wrapper__description{
+    @include font($font-FBC, 1.2em, 30px, none);
+
+    width: 395px;
+    display: inline-block;
+    margin: 0 61% 41px 4.8%;
+
+    @media (max-width: $mobile) {
+       @include font($font-PNR, 1em, 24px, none);
+      
+       width: 297px;
+       margin: 0 0 9% 5%;
+    }
+
+    @media (min-width: $mobile) and (max-width: $tablet){
+        display: block;
+        margin: 0 auto 5%;
+        text-align: center;
+    }
+}
+
+.scroll-down{
+    @include flex_center();
+    @include size_block(247px, 97px);
+
+    position: absolute;
+    bottom: 0;
+    background-color: $main-back-color;
+
+    &:hover{
+        @include hover_color($text-color--main);
+        
+        text-decoration: underline;
+    }
+
+    @media (min-width: $mobile) and (max-width: $tablet){
+        display: none;  
+    }
+
+    @media (max-width: $mobile) {
+        display: none;
+    }
+}
+
+.scroll-down__link{
+    @include font($font-YOR, 1em, 19px, $uppercase);
+}
+
+.scroll-down__ellipse{
+    @include flex_center();
+    @include size_block(29px, 29px);
+
+    margin-left: 4%;
+    border: 1px solid $text-color--main;
+    border-radius: 25px;
+}

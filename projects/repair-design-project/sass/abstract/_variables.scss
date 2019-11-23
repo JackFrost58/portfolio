@@ -1,0 +1,203 @@
+$font-PNR: "ProximaNova-Regular";
+$font-YOR: "YesevaOne-Regular", serif;
+$font-FDC: "FuturaDemiC-Regular",sans-serif;
+$font-TNR: "Times New Roman", serif;
+$font-FBC: "FuturaBookC-Regular", sans-serif;
+$font-FMC: "FuturaMediumC-Regular",sans-serif;
+$mobile: 376px;
+$desktop: 1440px;
+$max-screen: 1250px;
+$tablet: 770px;
+$text-color--main: #E3B873;
+$text-color--light: #ffffff;
+$text-color--dark: #363636;
+$text-color--dark-light: rgba(255, 255, 255, 0.3);
+$text-color--gray:rgba(54, 54, 54, 0.5);
+$main-back-color: #131313;
+$rotate-vertical: rotate(90deg);
+$rotate-half: rotate(-45deg);
+$transition: all 0.2s ease;
+$uppercase: uppercase; 
+$limpid: transparent;
+
+
+@mixin size_block($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+@mixin head_block($color){
+    @include font($font-YOR, 20px, 28px, $uppercase);
+
+    margin: 13px auto;
+    text-align: center;
+    color: $color;
+}
+
+@mixin font($font, $size, $line, $text-transform) {
+    font-family: $font;
+    font-size: $size;
+    line-height: $line;
+    text-transform: $text-transform;
+}
+
+@mixin flex_column(){
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin button_hover_back($back_color){
+    background-color: $back_color;
+    cursor: pointer;
+}
+
+@mixin flex_center(){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin hover_color($color){
+    color: $color;
+    cursor: pointer;
+}
+
+@mixin image($url){
+    background-image: url($url);
+    background-repeat:  no-repeat;
+}
+
+%pos_relative {
+    position: relative;  
+}
+
+%heading {
+    @include font($font-TNR, 1.1em, 25px, $uppercase);
+
+    margin: 0;
+    color: $text-color--main;
+}
+
+%additional{
+    @include size_block(94px, 42px);
+    @include font($font-FBC, 15px, 20px, none);
+    
+    display: inline-block;
+    margin-top: 9px;
+}
+
+%border-button{
+    border: 1px solid $text-color--main;
+}
+
+%input-placeholder{
+    height: 26px;
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+    border-bottom: 1px solid rgba(54, 54, 54, 0.3);
+    
+
+    &::placeholder { 
+        @include font($font-FBC, 18px, 20px, none);
+
+        color: $text-color--dark;
+        opacity: 1; 
+    }
+
+    &::-ms-input-placeholder {
+        color: $text-color--dark;
+    }
+
+    @media (max-width: $mobile){
+        border-bottom: 1px solid $text-color--dark;
+        background-color: transparent;
+
+        &:placeholder-shown{
+            background-color: $limpid;
+        }
+        
+        &::placeholder { 
+            color: $text-color--light;
+            opacity: 1; 
+        }
+    
+        &::-ms-input-placeholder {
+            color: $text-color--light;
+        }
+    }
+}
+
+%input-heading{
+    @include font($font-FBC, 15px, 20px, none);
+
+    color: $text-color--gray;
+
+    @media (max-width: $mobile){
+        color: $text-color--dark-light;
+   }
+}
+
+%icon-property{
+    position: relative;
+    margin: 0 auto;
+
+    &:before{
+        content: "";
+        @include size_block(2px, 32px);
+
+        position: absolute;
+        right: 56px;
+        display: inline-block;
+        background-color: $text-color--main;
+        transform: $rotate_vertical;
+    }
+
+    &:after{
+        content: "";
+        @include size_block(2px, 32px);
+
+        position: absolute;
+        left: 56px;
+        display: inline-block;
+        background-color: $text-color--main;
+        transform: $rotate_vertical;
+    }
+}
+
+%checkbox{
+    @include font($font-FBC, 16px, 22px, none);
+
+    display: inline-block;
+    width: 286px;
+    position: relative;
+    padding-left: 6px;
+    line-height: 20px;
+    cursor: pointer;
+    color: $text-color--dark;
+
+    &:before{
+        content: "";
+        @include size_block(18px, 18px);
+
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        background-color: $text-color--main; 
+    }
+
+    &:after{
+        content: "";
+        @include size_block(8px, 5px);
+
+        position: absolute;
+        transition: $transition;
+        left: 4px;
+        top: 4px;
+        border-radius: 1px;
+        border-left: 2px solid $text-color--light;
+        border-bottom: 2px solid $text-color--light;
+        transform: $rotate-half;
+    }   
+
+}

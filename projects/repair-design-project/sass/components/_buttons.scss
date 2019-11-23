@@ -1,0 +1,223 @@
+.request__button{
+    width: 161px;
+    height: 37px;
+    margin: auto 0;
+    border: 1px solid $limpid;
+    border-radius: 2px;
+    background-color: $text-color--main;
+    p{
+        margin: auto 0;
+        @include font($font-PNR, 0.9em, 15px, $uppercase);
+        color: $text-color--light;
+    }
+
+    &:hover{
+        @include button_hover_back($limpid);
+        border: 1px solid $text-color--light;
+        p{
+            color: $text-color--main;
+        }
+    }
+
+    @media (min-width: $mobile) and (max-width: $tablet){
+        display: none;    
+    }
+
+    @media (max-width: $mobile) {
+       display: none;
+    }
+
+}
+
+.order-wrapper__button{
+    @include size_block(207px, 51px);
+   
+    display: inline-block;
+    border: 1px solid $text-color--light;
+    border-radius: 2px;
+    background-color: $limpid;
+
+    p{
+        @include font($font-PNR, 1em, 15px, $uppercase);
+
+        margin: auto 0;
+        color: $text-color--light;
+    }
+
+    &:hover{
+        @include button_hover_back($text-color--main);
+        border: 1px solid $text-color--light;
+    }
+
+    &:first-of-type{
+        margin: 0 1.5% 19% 60px;
+    }
+
+    @media (min-width: $mobile) and (max-width: $tablet){
+        @include size_block(400px, 51px);
+
+        display: block;
+        margin: 0 auto 5%;  
+
+        &:first-of-type{
+            margin: 0 auto 5%;
+        }
+    }
+
+    @media (max-width: $mobile) {
+        @include size_block(339px, 51px);
+        margin-left: 5%;
+        margin-bottom: 20px;
+
+        &:first-of-type{
+            margin-left: 5%;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+.order-wrapper__button--active{
+    @include button_hover_back($text-color--main);
+}
+
+.slider__dot{
+    @include size_block(10px, 10px);
+    padding: 0;
+    margin-right: 17px;
+    border: 1px solid $limpid;
+    border-radius: 100px;
+    background-color: rgba(255, 255, 255, 0.3);
+
+    &:hover{
+        background-color: $text-color--light;
+    }
+
+    &:last-of-type{
+        margin-right: 0;
+    }
+}
+
+.slider__dot--active{
+    background-color: $text-color--light;
+}
+
+.slider__arrow-left{
+    @include size_block(41px, 15px);
+
+    margin-top: 2px;
+    border: 1px solid $limpid;
+    background-color: $limpid;
+    background-image: url(./assets/img/arrow-left.png);
+
+    &:hover{
+       @extend %border-button;
+    }
+}
+
+.slider__arrow-right{
+    @include size_block(43px, 15px);
+    @include image("./assets/img/arrow-right.png");
+
+    margin-top: 2px;
+    border: 1px solid $limpid;
+    background-color: $limpid;
+
+    &:hover{
+       @extend %border-button;
+    }
+}
+
+.completed-project-slider__button{
+    @include size_block(55px, 55px);
+
+    position: absolute;
+    padding: 0;
+    margin-top: 205px;
+    border: 1px solid transparent;
+    border-radius: 25px;
+    background-color: $text-color--main;
+
+    &:hover{
+        border: 2px solid #ff0000
+    }
+
+    @media (max-width: $mobile){
+        @include size_block(36px, 36px);
+
+        img{
+            @include size_block(6px, 10px);
+        }
+    }
+}
+
+.completed-project-slider__button_right{
+    right: 41px;
+
+    @media (max-width: $mobile){
+        right: 34px;
+        margin-top: 103px;
+    }
+}
+
+.completed-project-slider__button_left{
+    display: none;
+    margin-left: 46px;
+
+    @media (max-width: $mobile){
+        display: inline;
+        margin-top: 103px;
+        margin-left: 14px;
+    }
+}
+
+.submit-button{
+    @include size_block(200px, 51px);
+
+    border: 0 solid transparent;
+    color: $text-color--light;
+    background-color: $text-color--main;
+
+    @media (max-width: $mobile){
+        @include size_block(340px, 51px);
+
+        margin: auto;
+    }    
+}
+
+.submit-button--left{
+    @include size_block(213px, 51px);
+
+    margin-left: 48.2%;
+    margin-bottom: 5%;
+
+    @media (min-width: $mobile) and (max-width: $tablet){
+        margin: 0;   
+    }
+}
+
+
+.submit-button--down{
+    @media (max-width: $mobile) {
+        position: relative;
+        top: 82px;
+    }
+}
+
+.address__social{
+    @include size_block(28px, 28px);
+    @include flex_center();
+
+    margin-right: 15px;
+    border: 1px solid $limpid;
+    border-radius: 50%;
+    background: $text-color--main;
+
+    &:hover{
+        border: 1px solid #ff0000
+    }
+
+    @media (max-width: $mobile) {
+        @include size_block(39px, 39px);
+    }
+}
+

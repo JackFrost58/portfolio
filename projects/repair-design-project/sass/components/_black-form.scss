@@ -1,0 +1,78 @@
+.black-form{
+    margin-top: 51px;
+    padding-top: 28px;
+    background-color: $main-back-color;
+}
+
+.black-form__head{
+    @include font($font-FDC, 20px, 25px, none);
+
+    text-align: center;
+}
+
+.black-form-container{
+    @include size_block(81%, 10%);
+    @include flex_column();
+
+    margin: 0 auto 48px;
+
+    &:first-of-type{
+        margin-top: 45px;
+    }
+
+    &:nth-last-of-type(2){
+        margin-bottom: 0;
+    }
+
+}
+
+.black-form-container__heading{
+    @include font($font-FBC, 15px, 25px, none);
+
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.black-form-container__input{
+    @include font($font-FMC, 18px, 25px, none);
+
+    color: $text-color--light;
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    background-color: transparent;
+
+    &:placeholder-shown{
+        background-color: $limpid;
+    }
+
+    &::placeholder { 
+        @include font($font-FBC, 18px, 25px, none);
+
+        color: $text-color--light;
+        opacity: 1; 
+    }
+}
+
+.black-form-check{
+    width: 300px;
+    margin: 16px 0 39px 9.6%;
+}
+
+.black-form-check__text{
+    @extend %checkbox;
+
+    color: $text-color--light;
+}
+
+.black-form-check__checkbox{
+    opacity: 0;
+}
+
+.black-form-check--center{
+    margin: 16px auto 39px;
+
+    @media (max-width: $mobile){
+        margin: 16px 0 39px;
+    }
+}

@@ -1,0 +1,167 @@
+.section-online-controls{
+    margin: 0;
+    background: $text-color--light;
+
+    @media (max-width: $mobile){
+        background: $main-back-color;
+    }
+
+    @media (min-width: $mobile) and (max-width: $tablet){
+          
+    }
+}
+
+.section-online-control__video{
+    height: 434px;
+    background: linear-gradient($main-back-color 52%, $text-color--light 48%);
+
+    iframe{
+        @include size_block(57%, 100%);
+        
+        display: block;
+        margin: 0 auto;
+
+        @media (min-width: $mobile) and (max-width: $tablet){
+            width: 100%;
+            margin: 0;
+        }
+
+        @media (max-width: $mobile){
+            margin: 0 auto;
+            width: 340px;
+            
+        }
+       
+    }
+
+    @media (max-width: $mobile){
+        height: 207px;
+        background: $main-back-color;
+    }
+}
+
+
+.section-online-controls__line{
+    @include size_block(51px, 1px);
+
+    margin: 4.5% auto 2.4% auto;
+    background-color: $text-color--main;
+
+    @media (max-width: $mobile){
+        margin: 28px auto 21px;
+    }
+}
+
+.section-online-control__text{
+    @include font($font-FBC, 20px, 34px, none);
+
+    display: block;
+    width: 47%;
+    margin: 0 auto;
+    text-align: center;
+    color: $text-color--dark;
+
+    @media (min-width: $mobile) and (max-width: $tablet){
+        width: 81%;     
+    }
+
+    @media (max-width: $mobile){
+        width: 340px;
+        font-size: 14px;
+        line-height: 24px;
+        color: $text-color--light;
+    }
+}
+
+.submit-form{
+    display: flex;
+    flex-wrap: wrap;
+    width: 770px;
+    margin: 91px auto 109px auto; 
+
+    @media (min-width: $mobile) and (max-width: $tablet){
+        justify-content: space-between;
+        width: 95%;
+        margin: 51px auto 54px auto; 
+    }
+
+    @media (max-width: $mobile){
+        @include size_block(100%, 100%);
+        @include flex-column();
+
+        margin: 28px auto 0 ;
+        background: linear-gradient($main-back-color 92%, $text-color--light 8%);
+    }
+}
+
+.input-name{
+    @include flex_column();
+
+    margin-right: 15.4%;
+
+    @media (min-width: $mobile) and (max-width: $tablet){
+        margin-right: 6.5%;
+    }
+
+    @media (max-width: $mobile){
+        @include size_block(340px, 100%);
+
+        margin: auto;
+        margin-bottom: 63px;
+    }
+}
+
+.input-phone{
+    @include flex_column();
+
+    margin-right: 6.5%;
+
+    @media (max-width: $mobile){
+        @include size_block(340px, 100%);
+
+        margin: auto;
+        margin-bottom: 26px;
+    }
+}
+
+.input-name__heading{
+   @extend %input-heading;
+}
+
+.input-name__enter{
+    @extend %input-placeholder;
+}
+
+.input-phone__heading{
+    @extend %input-heading;
+
+    width: 231px;
+}
+
+.input-phone__enter{
+    @extend %input-placeholder;
+}
+
+.input-check{
+    margin: 2% auto;
+
+    @media (max-width: $mobile){
+        position: relative;
+        bottom: 52px;
+        z-index: 2;
+        margin-left: 20px;
+        margin-bottom: 62px;
+    }    
+}
+
+.input-check__text{
+    @extend %checkbox;
+
+    @media (max-width: $mobile){
+       color: $text-color--light;
+    } 
+}
+
+.input-check__checkbox{
+    opacity: 0;
+}

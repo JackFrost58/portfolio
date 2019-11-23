@@ -1,0 +1,25 @@
+.footer{
+    display: flex;
+    
+    background-color: $main-back-color;
+
+    @media (min-width: $mobile) and (max-width: $tablet){
+        display: none;    
+    }
+
+    @media (max-width: $mobile) {
+       display: none;
+    }
+}
+
+
+
+.footer__logo{
+    margin: 48px 95px;
+    color: $text-color--main;
+
+    h2{
+        @include font($font-FDC, 14px, 16px, $uppercase);
+        margin: 0;
+    }
+}

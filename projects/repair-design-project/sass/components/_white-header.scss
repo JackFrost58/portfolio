@@ -1,0 +1,20 @@
+.white-heading__text{
+    @include head_block(#181818);
+
+    @media (max-width: $mobile){
+        margin-top: 58px;
+    }
+}
+
+.white-heading__icon{
+    @include size_block(32px, 29px);
+
+    @extend %icon-property;
+}
+
+.white-heading__text--letter-white{
+    @media (max-width: $mobile){
+        margin-top: 0;
+        color: $text-color--light;
+    }
+}
