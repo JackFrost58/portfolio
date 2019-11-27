@@ -13,8 +13,10 @@ educationPanel.addEventListener('click', () => {
 
     if (content.style.maxHeight) {
         content.style.maxHeight = null;
+        list.classList.remove('border')
     } else {
         content.style.maxHeight = content.scrollHeight + 'px';
+        list.classList.add('border')
     }
     buttonArrow.classList.toggle('education-open--rotate');
 }, false);

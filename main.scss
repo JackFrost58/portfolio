@@ -47,6 +47,11 @@ body{
         width: 150px;
         height: 150px;
         border-radius: 50%;
+
+        @media (max-width: $mobile){
+            width: 100px;
+            height: 100px;
+        }
     }
 }
 
@@ -58,6 +63,11 @@ body{
     align-items: center;
     width: 50%;
     margin: 0 auto;
+
+    @media (max-width: $mobile){
+        width: 100%;
+        margin: 2% 0;
+    }
 }
 
 .author-portfolio__links{
@@ -69,6 +79,10 @@ body{
     @include font($font-YOR, 20px, 25px, uppercase);
     display: block;
     margin-bottom: 4%;
+
+    @media (max-width: $mobile){
+        @include font($font-YOR, 15px, 25px, uppercase);
+    }
 }
 
 .author-portfolio-head__text{
@@ -87,6 +101,10 @@ body{
 
         &:hover{
             color: $border-color;
+        }
+
+        @media (max-width: $mobile){
+            @include font($font-YOR, 12px, 25px, uppercase);
         }
     }
 }
@@ -135,11 +153,14 @@ body{
     &:hover {
         color: #ff0000;
     }
+
+    @media (max-width: $mobile){
+       width: 100%;
+       justify-content: space-around;
+    }
 }
 
 .eduction-list{
-    @extend %border-bottom;
-
     width: 50%;
     margin: 0 auto 2%;
     padding: 0;
@@ -147,6 +168,11 @@ body{
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
+
+    @media (max-width: $mobile){
+        width: 100%;
+        text-align: center;
+    }
 }
 
 .education-open--rotate{
@@ -176,7 +202,12 @@ body{
 
     display: flex;
     width: 50%;
-    margin: 0 auto 2%;   
+    margin: 0 auto 2%;  
+    
+    @media (max-width: $mobile){
+        width: 100%;
+        justify-content: space-around;
+    }
 }
 
 .swiper-container {
@@ -253,4 +284,8 @@ body{
 
 .swiper-button-prev{
     color: $border-color !important;
+}
+
+.border {
+   @extend %border-bottom;
 }

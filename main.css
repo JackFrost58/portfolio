@@ -1,4 +1,4 @@
-.author-portfolio__wrapper, .author-portfolio-head, .education__panel, .eduction-list, .projects-head {
+.author-portfolio__wrapper, .author-portfolio-head, .education__panel, .projects-head, .border {
   border-bottom: 1px solid #ff0000;
 }
 
@@ -35,6 +35,13 @@ body {
   border-radius: 50%;
 }
 
+@media (max-width: 376px) {
+  .author-portfolio__photo img {
+    width: 100px;
+    height: 100px;
+  }
+}
+
 .author-portfolio__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -47,6 +54,13 @@ body {
           align-items: center;
   width: 50%;
   margin: 0 auto;
+}
+
+@media (max-width: 376px) {
+  .author-portfolio__wrapper {
+    width: 100%;
+    margin: 2% 0;
+  }
 }
 
 .author-portfolio__links {
@@ -66,6 +80,15 @@ body {
   text-transform: uppercase;
   display: block;
   margin-bottom: 4%;
+}
+
+@media (max-width: 376px) {
+  .author-portfolio__name {
+    font-family: "YesevaOne-Regular", serif;
+    font-size: 15px;
+    line-height: 25px;
+    text-transform: uppercase;
+  }
 }
 
 .author-portfolio-head__text {
@@ -91,6 +114,15 @@ body {
 
 .author-portfolio__link a:hover {
   color: #ff0000;
+}
+
+@media (max-width: 376px) {
+  .author-portfolio__link a {
+    font-family: "YesevaOne-Regular", serif;
+    font-size: 12px;
+    line-height: 25px;
+    text-transform: uppercase;
+  }
 }
 
 .author-portfolio-head {
@@ -138,6 +170,14 @@ body {
   color: #ff0000;
 }
 
+@media (max-width: 376px) {
+  .education__panel {
+    width: 100%;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
 .eduction-list {
   width: 50%;
   margin: 0 auto 2%;
@@ -147,6 +187,13 @@ body {
   overflow: hidden;
   -webkit-transition: max-height 0.2s ease-out;
   transition: max-height 0.2s ease-out;
+}
+
+@media (max-width: 376px) {
+  .eduction-list {
+    width: 100%;
+    text-align: center;
+  }
 }
 
 .education-open--rotate {
@@ -185,6 +232,14 @@ body {
   display: flex;
   width: 50%;
   margin: 0 auto 2%;
+}
+
+@media (max-width: 376px) {
+  .projects-head {
+    width: 100%;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
 }
 
 .swiper-container {
