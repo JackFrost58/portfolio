@@ -42,7 +42,8 @@
     width: 74%;
     margin: 0 auto;
 
-    @media (min-width: $mobile) and (max-width: $tablet){
+    
+    @media (min-width: $mobile) and (max-width: $tv-size){
         flex-wrap: wrap;
         justify-content: space-around;
         margin-bottom: 5%;
@@ -58,7 +59,7 @@
 }
 
 .block-team__member{
-    @media (min-width: $mobile) and (max-width: $tablet){
+    @media (min-width: $mobile) and (max-width: $tv-size){
         margin-bottom: 8%;
     }
 }

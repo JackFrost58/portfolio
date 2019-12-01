@@ -9,13 +9,13 @@
 }
 
 .description-project{
-    width: 36.5%;
+    width: 30.5%;
     margin-left: 5.5%;
     padding-top: 9.5%;
 
     @media (min-width: $mobile) and (max-width: $tablet){
         width: 100%;
-        margin-left: 8.5%;
+        margin: 0;
     }
 
     @media (max-width: $mobile){
@@ -25,7 +25,6 @@
         padding-top: 60px;
     }
 }
-
 
 .description-project__heading{
     @include font($font-YOR, 27px, 37px, $uppercase);
@@ -76,7 +75,7 @@
     @include font($font-FBC, 18px, 28px, none);
 
     display: inline-block;
-    width: 98%;
+    width: 99%;
     margin-bottom: 42px;
 
     @media (min-width: $mobile) and (max-width: $tablet){
@@ -103,7 +102,6 @@
     @media (min-width: $mobile) and (max-width: $tablet){
         @include image("./assets/img/background-order-tablet.png");
 
-        width: 70%;
         margin: 0 auto;
         padding-top: 10%;
         padding-left: 5%;
@@ -217,10 +215,11 @@
 
 .slider{
     display: flex;
+    width: 216px;
     margin-bottom: 12%;
 
     @media (min-width: $mobile) and (max-width: $tablet){
-        margin: 5% 0 5% 30%;
+        margin: 5% auto;
     }
 
     @media (max-width: $mobile){
@@ -237,6 +236,10 @@
     @include  size_block(623px, 40px);
 
     margin: 58px 0 45px 67px;
+
+    @media (min-width: $tablet) and (max-width: $tv-size) {
+        display: none;
+    }
 
     @media (min-width: $mobile) and (max-width: $tablet){
         display: none;
@@ -281,7 +284,13 @@
 .completed-project-slider{
     @include flex_column();
     
+    width: 64%;
     position: relative;
+    overflow: hidden;
+
+    @media (min-width: $tablet) and (max-width: $tv-size) {
+        justify-content: center;
+    }
 
     @media (min-width: $mobile) and (max-width: $tablet){
         display: none;
@@ -293,13 +302,10 @@
 }
 
 .completed-project-slider__images{
-    @include size_block(845px, 482px);
+    @include size_block(80%, 482px);
 
-    
     display: flex;
     margin-left: 67px;
-    
-    overflow: hidden;
 
     .completed-project-slider__image{
         margin-right: 21px;

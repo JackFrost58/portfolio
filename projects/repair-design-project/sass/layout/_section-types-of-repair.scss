@@ -2,10 +2,10 @@
     display: flex;
     margin: 30px 7% 12%;
 
-    @media (min-width: $mobile) and (max-width: $tablet){
+    @media (min-width: $mobile) and (max-width: $tv-size) {
         flex-wrap: wrap;
-        justify-content: space-around;
-        margin-bottom: 6%;
+        justify-content: center;
+        margin-bottom: 50px;
     }
 
     @media (max-width: $mobile){
@@ -15,15 +15,19 @@
 }
 
 .price-wrapper__item{
-    width: 32%;
+    width: 393px;
     margin-right: 2.5%;    
 
     &:last-child{
         margin-right: 0;
+
+        @media (min-width: $mobile) and (max-width: $tablet) {
+            margin: 0 auto;
+        } 
     }
 
-    @media (min-width: $mobile) and (max-width: $tablet){
-        width: 45%;
+    @media (min-width: $mobile) and (max-width: $tv-size){
+        width: 393px;
         margin-right: 0;
     }
 
@@ -43,10 +47,20 @@
 
 .price-wrapper--back-redecorating{
     @include image("./assets/img/redecorating.png");
+
+    @media (min-width: $mobile) and (max-width: $tablet) {
+        order: 1;
+        margin: 0 auto;
+    } 
 }
 
 .price-wrapper--back-overhaul{
     @include image("./assets/img/overhaul.png");
+
+    @media (min-width: $mobile) and (max-width: $tablet) {
+        order: 2;
+        margin: 0 auto;
+    }
 
     @media (max-width: $mobile){
         @include image("./assets/img/overhaul-media.png");
@@ -55,6 +69,10 @@
 
 .price-wrapper--back-designer-repair{
     @include image("./assets/img/designer-repair.png");
+
+    @media (min-width: $mobile) and (max-width: $tablet) {
+        order: 3;
+    }
 }
 
 .price-wrapper__head-item{
@@ -77,10 +95,6 @@
     padding-top: 25px;
     background: $text-color--light;
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
-
-    @media (min-width: $mobile) and (max-width: $tablet){
-        width: 250px;   
-    }
 
     @media (max-width: $mobile){
         @include size_block(270px, 241px);
@@ -112,7 +126,7 @@
     @extend %pos_relative;
     
     bottom: 28px;
-    left: 29px;
+    left: 32px;
     background-color: $text-color--main;
     box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3);
 
@@ -137,13 +151,17 @@
 .repair-additional-info{
     display: flex;
 
+    @media (min-width: $tablet) and (max-width: $tv-size) {
+        justify-content: center;
+    }
+
     @media (max-width: $mobile) {
         display: none;
     }
 }
 
 .repair-additional-info__container{
-    width: 35.3%;
+    width: 508px;
 
     @media (min-width: $mobile) and (max-width: $tablet){
         width: 80%;  
@@ -173,6 +191,10 @@
 
     @include image("./assets/img/background-circle.png");
     overflow: hidden;
+
+    @media (min-width: $tablet) and (max-width: $tv-size) {
+        display: none;
+    }
 
     @media (min-width: $mobile) and (max-width: $tablet){
         display: none;   
@@ -334,6 +356,19 @@
     bottom: 40px;
     right: 0;
     margin-right: 43px;
+
+    @media (min-width: $tablet) and (max-width: $tv-size) {
+        position: inherit;
+        justify-content: center;
+
+        .block-fantasies__img-sofa{
+            display: none;
+        }
+
+        .block-fantasies__img-room {
+            display: none;
+        }
+    }
 
     @media (max-width: $mobile){
         display: none;

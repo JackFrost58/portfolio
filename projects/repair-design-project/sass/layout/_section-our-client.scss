@@ -24,10 +24,19 @@
     display: flex;
     justify-content: space-between;
     margin: 0 7.2%;
+
+    @media (min-width: $mobile) and (max-width: $tv-size){
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
 }
 
 .block-comment{
     width: 376px;
+
+    @media (min-width: $mobile) and (max-width: $tv-size){
+        margin-bottom: 5%;
+    }
 }
 
 .block-comment__content{

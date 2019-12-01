@@ -1,8 +1,12 @@
-.header{
+.header {
     display: flex;
     background-color: $main-back-color;
 
-    @media (min-width: $mobile) and (max-width: $tablet){
+    @media (min-width: $tablet) and (max-width: $tv-size) {
+        justify-content: space-between;
+    }
+
+    @media (min-width: $mobile) and (max-width: $tablet) {
         justify-content: space-between;  
     }
 
@@ -13,16 +17,17 @@
     }
 }
 
-.header__logo{
-    margin: 2.4% 7% 2.6% 5.6%;
+.header__logo {
+    width: 180px;
+    margin: 2.4% 7% 2.6% 82px;
     color: $text-color--main;
 
-    h1{
+    h1 {
         @include font($font-FDC, 14px, 16px, $uppercase);
         margin: 0;
     }
 
-    @media (min-width: $mobile) and (max-width: $tablet){
+    @media (min-width: $mobile) and (max-width: $tablet) {
        margin-right: 0;
        margin-left: 82px;   
     }

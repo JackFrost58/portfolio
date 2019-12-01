@@ -1,5 +1,5 @@
 .hf-navbar{
-    width: 40.5%;
+    width: 584px;
     margin: auto 4.6% auto 0;
 
     @media (min-width: $mobile) and (max-width: $tablet){
@@ -14,6 +14,7 @@
 .hf-navbar-list{
     display: flex;
     justify-content: space-between;
+    width: 100%;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -25,7 +26,6 @@
 
 .hf-navbar-list__item{
     @include font($font-FBC, 14px, 16px, $uppercase);
-    margin-right: 8%;
 
     &:hover{
         @include hover_color($text-color--main);
@@ -49,7 +49,12 @@
 }
 
 .hf__telephone{
+    width: 126px;
     color: $text-color--main;
+
+    @media (min-width: $tablet) and (max-width: $tv-size) {
+        display: none;
+    }
 
     @media (max-width: $mobile) {
         color: $text-color--light;

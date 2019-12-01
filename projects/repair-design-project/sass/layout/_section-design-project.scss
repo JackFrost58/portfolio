@@ -33,7 +33,7 @@
     margin: 0;
     background: linear-gradient($text-color--light 38%, $main-back-color 0%);
 
-    @media (min-width: $mobile) and (max-width: $tablet){
+    @media (min-width: $mobile) and (max-width: $tv-size){
         flex-wrap: wrap;
         justify-content: space-around;
         background: linear-gradient($text-color--light 18%, $main-back-color 0%);
@@ -60,7 +60,7 @@
         margin-right: 7%;
     }
 
-    @media (min-width: $mobile) and (max-width: $tablet){
+    @media (min-width: $mobile) and (max-width: $tv-size){
         margin: 0;
 
         &:first-child{
@@ -199,7 +199,7 @@
     display: inline-block;
     margin-top: 138px;
 
-    @media (min-width: $mobile) and (max-width: $tablet){
+    @media (min-width: $mobile) and (max-width: $tv-size){
         display: none;
     }
 
@@ -215,6 +215,12 @@
 
     @media (max-width: $mobile) {
         display: none;
+    }
+}
+
+.steps-goal__image {
+    img {
+        width: 100%;
     }
 }
 
@@ -270,6 +276,10 @@
     @media (min-width: $mobile) and (max-width: $tablet){
         margin: 0 auto;
     }
+
+    @media (min-width: $tablet) and (max-width: $tv-size) {
+       width: 100%;
+    }
 }
 
 .steps-goal__description-number{
@@ -298,6 +308,10 @@
     @media (min-width: $mobile) and (max-width: $tablet){
         display: none;
     }
+
+    @media (min-width: $tablet) and (max-width: $tv-size) {
+        @include flex_center();
+    }
 }
 
 .steps-goal__container{
@@ -305,6 +319,14 @@
     @include flex_column();
 
     margin: 50px 0 41px;
+
+    @media (min-width: $tablet) and (max-width: $tv-size) {
+        display: none;
+    }
+}
+
+.slider--extend {
+    width: 315px;
 }
 
 .steps-goal-list{  

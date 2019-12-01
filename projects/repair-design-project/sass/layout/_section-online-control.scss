@@ -80,6 +80,11 @@
     margin: 91px auto 109px auto; 
 
     @media (min-width: $mobile) and (max-width: $tablet){
+        flex-direction: column;
+        align-items: center;
+    }
+
+    @media (min-width: $mobile) and (max-width: $tablet){
         justify-content: space-between;
         width: 95%;
         margin: 51px auto 54px auto; 
@@ -100,7 +105,9 @@
     margin-right: 15.4%;
 
     @media (min-width: $mobile) and (max-width: $tablet){
-        margin-right: 6.5%;
+        width: 50%;
+        margin: 5px;
+        order: 1;
     }
 
     @media (max-width: $mobile){
@@ -115,6 +122,12 @@
     @include flex_column();
 
     margin-right: 6.5%;
+
+    @media (min-width: $mobile) and (max-width: $tablet){
+        width: 50%;
+        margin: 5px;
+        order: 2;
+    }
 
     @media (max-width: $mobile){
         @include size_block(340px, 100%);
@@ -144,6 +157,10 @@
 
 .input-check{
     margin: 2% auto;
+
+    @media (min-width: $mobile) and (max-width: $tablet){
+        order: 4;
+    }
 
     @media (max-width: $mobile){
         position: relative;
